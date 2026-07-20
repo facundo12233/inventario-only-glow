@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Inventario - Only Glow Studio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<img src="imagenes/fotodellogo.png" 
+alt="Only Glow Studio" 
+class="logo">
+
+
+<header>
+
+</header>
+
+
+
+<!-- ================= MENU PRINCIPAL ================= -->
+
+
+<div class="tarjeta" id="principal">
+
+
+<h1 class="titulo1">
+Inventario
+</h1>
+
+
+<p class="fecha">
+22 de Julio de 2026
+</p>
+
+
+<h2>
+Menú Principal
+</h2>
+
+
+<p class="subtitulo">
+Seleccione una categoría
+</p>
+
+
+<button onclick="abrirPestanas()">
+💫 Pestañas
+</button>
+
+
+<button onclick="abrirUnas()">
+💅 Uñas
+</button>
+
+
+<button onclick="abrirCejas()">
+✨ Cejas
+</button>
+
+
+<button class="salir" onclick="salir()">
+🚪 Salir
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- ================= PESTAÑAS ================= -->
+
+
+<div id="Menupestanas" style="display:none;" class="tarjeta">
+
+
+<h1>
+💫 Pestañas
+</h1>
+
+
+
+<button onclick="mostrarPestanas()">
+Mostrar Inventario
+</button>
+
+
+<button onclick="agregarPestana()">
+Agregar Producto
+</button>
+
+
+<button onclick="eliminarPestana()">
+Eliminar Producto
+</button>
+
+
+<button onclick="modificarPestana()">
+Modificar Cantidad
+</button>
+
+
+<button onclick="aumentarPestana()">
+Aumentar Stock
+</button>
+
+
+<button onclick="disminuirPestana()">
+Disminuir Stock
+</button>
+
+
+
+<h2>
+Inventario actual
+</h2>
+
+
+<div id="listaPestanas">
+
+</div>
+
+
+
+<br>
+
+
+<button class="salir" onclick="volver()">
+Salir
+</button>
+
+</div>
+
+
+
+
+
+
+<!-- ================= UÑAS ================= -->
+
+
+<div id="Menuunas" style="display:none;" class="tarjeta">
+
+
+<h1>
+💅 Uñas
+</h1>
+
+
+
+<button onclick="mostrarUnas()">
+Mostrar Inventario
+</button>
+
+
+<button onclick="agregarUna()">
+Agregar Producto
+</button>
+
+
+<button onclick="eliminarUna()">
+Eliminar Producto
+</button>
+
+
+<button onclick="modificarUna()">
+Modificar Cantidad
+</button>
+
+
+<button onclick="aumentarUna()">
+Aumentar Stock
+</button>
+
+
+<button onclick="disminuirUna()">
+Disminuir Stock
+</button>
+
+
+
+<h2>
+Inventario actual
+</h2>
+
+
+<div id="listaUnas">
+
+</div>
+
+
+
+<br>
+
+
+<button class="salir" onclick="volver()">
+Salir
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= CEJAS ================= -->
+
+
+<div id="Menucejas" style="display:none;" class="tarjeta">
+
+
+<h1>
+✨ Cejas
+</h1>
+
+
+
+<button onclick="mostrarCejas()">
+Mostrar Inventario
+</button>
+
+
+<button onclick="agregarCeja()">
+Agregar Producto
+</button>
+
+
+<button onclick="eliminarCeja()">
+Eliminar Producto
+</button>
+
+
+<button onclick="modificarCeja()">
+Modificar Cantidad
+</button>
+
+
+<button onclick="aumentarCeja()">
+Aumentar Stock
+</button>
+
+
+<button onclick="disminuirCeja()">
+Disminuir Stock
+</button>
+
+
+
+<h2>
+Inventario actual
+</h2>
+
+
+<div id="listaCejas">
+
+</div>
+
+
+
+<br>
+
+
+<button class="salir" onclick="volver()">
+Salir
+</button>
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+Sistema de Inventario
+
+<br>
+
+Versión 1.0
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+</html>
