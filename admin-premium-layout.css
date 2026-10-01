@@ -1,0 +1,462 @@
+:root{
+  --admin-premium-bg:#f4f6fb;
+  --admin-premium-card:#ffffff;
+  --admin-premium-line:#e7e9f1;
+  --admin-premium-ink:#18212f;
+  --admin-premium-muted:#6d788b;
+  --admin-premium-pink:#e85898;
+  --admin-premium-pink-soft:#f9e5ef;
+  --admin-premium-dark:#120d13;
+}
+
+body.admin-premium-ready{
+  background:linear-gradient(180deg,#f7f8fc 0%,#eef2f7 100%);
+  color:var(--admin-premium-ink);
+}
+
+body.admin-premium-ready .panel-admin{
+  background:transparent;
+}
+
+#adminShellPremium{
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  min-height:100vh;
+}
+
+.admin-sidebar-premium{
+  position:sticky;
+  top:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  height:100vh;
+  padding:22px 18px;
+  color:#fff;
+  background:
+    radial-gradient(circle at top left, rgba(232,88,152,.22), transparent 28%),
+    linear-gradient(180deg,#120d13 0%,#1a1018 55%,#140d14 100%);
+  border-right:1px solid rgba(255,255,255,.06);
+}
+
+.admin-sidebar-premium .marca-admin{
+  align-items:flex-start;
+  padding:8px 10px 14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.admin-sidebar-premium .marca-admin > span{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  color:#ff5da6;
+  background:rgba(255,255,255,.08);
+}
+
+.admin-sidebar-premium .marca-admin strong,
+.admin-sidebar-premium .marca-admin small{
+  color:#fff;
+}
+
+.admin-sidebar-premium .marca-admin small{
+  color:rgba(255,255,255,.65);
+}
+
+.admin-sidebar-premium .admin-sidebar-meta{
+  display:grid;
+  gap:10px;
+}
+
+.admin-date-chip,
+.admin-status-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.88);
+  font-size:12px;
+  font-weight:700;
+}
+
+.admin-status-chip::before,
+.admin-date-chip::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:#4ce08e;
+  box-shadow:0 0 0 4px rgba(76,224,142,.16);
+}
+
+.admin-date-chip::before{
+  background:#ff6bac;
+  box-shadow:0 0 0 4px rgba(255,107,172,.16);
+}
+
+.admin-sidebar-actions{
+  display:grid;
+  gap:10px;
+}
+
+.admin-sidebar-button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 14px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  color:#fff;
+  background:rgba(255,255,255,.06);
+  font-weight:800;
+  cursor:pointer;
+}
+
+.admin-sidebar-button--primary{
+  background:linear-gradient(135deg,#ff5ea6,#df4d94);
+  border-color:transparent;
+  box-shadow:0 14px 28px rgba(223,77,148,.24);
+}
+
+.admin-sidebar-nav-title{
+  margin:6px 10px 2px;
+  color:rgba(255,255,255,.62);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+#adminSidebarReplica{
+  display:grid;
+  gap:7px;
+}
+
+#adminSidebarReplica a{
+  display:flex;
+  align-items:center;
+  min-height:46px;
+  padding:0 14px;
+  border-radius:14px;
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  transition:.18s ease;
+}
+
+#adminSidebarReplica a:hover,
+#adminSidebarReplica a.activo{
+  color:#fff;
+  background:linear-gradient(135deg,rgba(232,88,152,.33),rgba(232,88,152,.18));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+}
+
+.admin-sidebar-promo{
+  margin-top:auto;
+  padding:18px;
+  border:1px solid rgba(232,88,152,.25);
+  border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(232,88,152,.08));
+}
+
+.admin-sidebar-promo span{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#ff92c1;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.4px;
+}
+
+.admin-sidebar-promo h3{
+  margin:0 0 8px;
+  font-size:21px;
+  line-height:1.15;
+}
+
+.admin-sidebar-promo p{
+  margin:0;
+  color:rgba(255,255,255,.72);
+  line-height:1.55;
+  font-size:13px;
+}
+
+.admin-main-premium{
+  min-width:0;
+  padding:18px 24px 28px;
+}
+
+body.admin-premium-ready .cabecera-admin{
+  position:sticky;
+  top:18px;
+  z-index:40;
+  margin:0 0 18px;
+  padding:16px 20px;
+  color:var(--admin-premium-ink);
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--admin-premium-line);
+  border-radius:24px;
+  box-shadow:0 18px 50px rgba(43,58,84,.08);
+  backdrop-filter:blur(12px);
+}
+
+body.admin-premium-ready .cabecera-admin .marca-admin small{
+  color:var(--admin-premium-muted);
+}
+
+body.admin-premium-ready .cabecera-admin .marca-admin > span{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+}
+
+body.admin-premium-ready .boton-cerrar-admin,
+body.admin-premium-ready .boton-actualizar-admin,
+body.admin-premium-ready #propuestasAdmin button,
+body.admin-premium-ready #directorioAdmin button,
+body.admin-premium-ready .marca-global-admin button,
+body.admin-premium-ready .an-suite-card button,
+body.admin-premium-ready .admin-campanas button,
+body.admin-premium-ready .nv-admin-module button{
+  border-radius:14px;
+}
+
+body.admin-premium-ready .boton-cerrar-admin{
+  color:#8f3c69;
+  background:#f8edf3;
+}
+
+body.admin-premium-ready .boton-actualizar-admin{
+  background:linear-gradient(135deg,#ff5ea6,#df4d94);
+  box-shadow:0 14px 30px rgba(223,77,148,.22);
+}
+
+body.admin-premium-ready .contenido-admin{
+  width:100%;
+  margin:0;
+  padding:6px 0 0;
+}
+
+body.admin-premium-ready .titulo-admin{
+  align-items:flex-end;
+  margin-bottom:22px;
+  padding:30px;
+  border-radius:28px;
+  color:#fff;
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,.14), transparent 22%),
+    linear-gradient(135deg,#191119 0%,#2a1723 55%,#5c2343 100%);
+  box-shadow:0 28px 55px rgba(49,25,39,.14);
+}
+
+body.admin-premium-ready .titulo-admin span{
+  color:#ffb2d0;
+}
+
+body.admin-premium-ready .titulo-admin p{
+  color:rgba(255,255,255,.78);
+}
+
+body.admin-premium-ready .titulo-admin h1{
+  margin:8px 0 10px;
+  font-size:42px;
+}
+
+body.admin-premium-ready .resumen-admin{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-bottom:22px;
+}
+
+body.admin-premium-ready .resumen-admin article,
+body.admin-premium-ready #indicadoresOperacionAdmin article{
+  position:relative;
+  overflow:hidden;
+  padding:22px;
+  border:1px solid var(--admin-premium-line);
+  border-radius:22px;
+  background:var(--admin-premium-card);
+  box-shadow:0 14px 40px rgba(42,58,84,.06);
+}
+
+body.admin-premium-ready .resumen-admin article::after,
+body.admin-premium-ready #indicadoresOperacionAdmin article::after{
+  content:"";
+  position:absolute;
+  inset:auto -28px -28px auto;
+  width:86px;
+  height:86px;
+  border-radius:999px;
+  background:radial-gradient(circle, rgba(232,88,152,.15), transparent 68%);
+}
+
+body.admin-premium-ready .resumen-admin small,
+body.admin-premium-ready #indicadoresOperacionAdmin small{
+  display:block;
+  color:var(--admin-premium-muted);
+  font-size:12px;
+  font-weight:700;
+}
+
+body.admin-premium-ready .resumen-admin strong,
+body.admin-premium-ready #indicadoresOperacionAdmin strong{
+  display:block;
+  margin-top:10px;
+  font-size:34px;
+  line-height:1;
+  color:var(--admin-premium-ink);
+}
+
+body.admin-premium-ready .modulo-admin,
+body.admin-premium-ready .marca-global-admin,
+body.admin-premium-ready .admin-portada-pro,
+body.admin-premium-ready .nv-admin-module,
+body.admin-premium-ready .admin-campanas,
+body.admin-premium-ready #pagosAdmin,
+body.admin-premium-ready #cobroAdmin{
+  border:1px solid var(--admin-premium-line);
+  border-radius:24px;
+  background:var(--admin-premium-card);
+  box-shadow:0 14px 40px rgba(42,58,84,.06);
+}
+
+body.admin-premium-ready #operacionAdmin{
+  margin-top:0;
+}
+
+body.admin-premium-ready #operacionAdmin h2,
+body.admin-premium-ready #directorioAdmin h2,
+body.admin-premium-ready #propuestasAdmin h2,
+body.admin-premium-ready .marca-global-admin h2,
+body.admin-premium-ready .admin-campanas h2,
+body.admin-premium-ready .nv-admin-module h2,
+body.admin-premium-ready #pagosAdmin h2,
+body.admin-premium-ready #cobroAdmin h2{
+  margin-top:0;
+  font-size:28px;
+  letter-spacing:-.02em;
+}
+
+body.admin-premium-ready #indicadoresOperacionAdmin{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+
+body.admin-premium-ready #alertasOperacionAdmin{
+  display:grid;
+  gap:10px;
+  margin-top:16px;
+}
+
+body.admin-premium-ready .aviso-admin{
+  margin:0;
+  padding:14px 16px;
+  border:1px solid #f1d9e6;
+  border-radius:16px;
+  color:#7c4060;
+  background:#fff5f9;
+}
+
+body.admin-premium-ready .texto-suave-admin,
+body.admin-premium-ready .admin-seccion-cab p,
+body.admin-premium-ready .cabecera-marca-global-admin p,
+body.admin-premium-ready .negocio-admin small,
+body.admin-premium-ready .admin-codigo-suscripcion small{
+  color:var(--admin-premium-muted);
+}
+
+body.admin-premium-ready .filtros-admin{
+  border:1px solid #ebedf4 !important;
+  border-radius:18px;
+  background:#f9fafc;
+}
+
+body.admin-premium-ready .filtros-admin label{
+  color:var(--admin-premium-ink);
+  font-weight:800;
+}
+
+body.admin-premium-ready .filtros-admin input,
+body.admin-premium-ready .filtros-admin select,
+body.admin-premium-ready .marca-global-admin input,
+body.admin-premium-ready .marca-global-admin select,
+body.admin-premium-ready .marca-global-admin textarea,
+body.admin-premium-ready .propuesta-admin input,
+body.admin-premium-ready .propuesta-admin select,
+body.admin-premium-ready .propuesta-admin textarea,
+body.admin-premium-ready .an-suite-card input,
+body.admin-premium-ready .an-suite-card select,
+body.admin-premium-ready .an-suite-card textarea,
+body.admin-premium-ready .nv-admin-module input{
+  border:1px solid #dfe4ee;
+  border-radius:12px;
+  background:#fff;
+}
+
+body.admin-premium-ready #listaPropuestasAdmin,
+body.admin-premium-ready .admin-lista-codigos,
+body.admin-premium-ready .nv-list{
+  margin-top:18px;
+}
+
+body.admin-premium-ready .propuesta-admin,
+body.admin-premium-ready .nv-row,
+body.admin-premium-ready .an-suite-card,
+body.admin-premium-ready .admin-codigo-suscripcion{
+  border-radius:18px;
+  border:1px solid #e7eaf1;
+  background:linear-gradient(180deg,#fff 0%,#fffcfd 100%);
+  box-shadow:none;
+}
+
+body.admin-premium-ready .negocio-admin{
+  border-left-width:5px !important;
+}
+
+body.admin-premium-ready .navegacion-admin.admin-nav-source{
+  display:none !important;
+}
+
+@media (max-width:1200px){
+  body.admin-premium-ready #indicadoresOperacionAdmin{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+@media (max-width:1024px){
+  #adminShellPremium{grid-template-columns:1fr;}
+  .admin-sidebar-premium{
+    position:static;
+    height:auto;
+    margin:14px 14px 0;
+    border-radius:26px;
+    border:1px solid rgba(255,255,255,.06);
+  }
+  .admin-main-premium{padding:14px;}
+  body.admin-premium-ready .cabecera-admin{top:0;}
+  body.admin-premium-ready .titulo-admin{padding:24px;}
+  body.admin-premium-ready .titulo-admin h1{font-size:34px;}
+}
+
+@media (max-width:760px){
+  body.admin-premium-ready .resumen-admin,
+  body.admin-premium-ready #indicadoresOperacionAdmin,
+  .admin-metricas-pro{
+    grid-template-columns:1fr !important;
+  }
+  body.admin-premium-ready .cabecera-admin{
+    padding:14px 16px;
+    border-radius:18px;
+  }
+  body.admin-premium-ready .titulo-admin{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+  }
+  body.admin-premium-ready .titulo-admin h1{font-size:30px;}
+  .admin-sidebar-premium{padding:16px;}
+}
