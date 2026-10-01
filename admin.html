@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Administración - AgendaNiva
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css?v=20260925"
+    >
+    <link rel="stylesheet" href="css/business-suite.css?v=20261020">
+    <link rel="stylesheet" href="css/admin-pro.css?v=20261026">
+    <link rel="stylesheet" href="css/admin-polish.css?v=20261027">
+
+<link rel="stylesheet" href="css/actualizacion-v2.css?v=20261001">    <link rel="stylesheet" href="css/admin-premium-layout.css?v=20261001">
+</head>
+
+
+<body>
+
+
+    <!-- ========================== -->
+    <!-- INICIO DE SESIÓN -->
+    <!-- ========================== -->
+
+    <main
+        class="acceso-admin"
+        id="accesoAdmin"
+    >
+
+        <section class="tarjeta-acceso-admin">
+
+            <div class="marca-admin">
+
+                <span>
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        AgendaNiva
+                    </strong>
+
+                    <small>
+                        Administración general
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <h1>
+                Panel privado
+            </h1>
+
+            <p>
+                Ingresá con tu cuenta administradora.
+            </p>
+
+
+            <form id="formLoginAdmin">
+
+                <label for="emailAdmin">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="emailAdmin"
+                    autocomplete="email"
+                    required
+                >
+
+
+                <label for="passwordAdmin">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="passwordAdmin"
+                    autocomplete="current-password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Ingresar
+                </button>
+
+            </form>
+
+
+            <p
+                class="mensaje-admin"
+                id="mensajeLoginAdmin"
+            >
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================== -->
+    <!-- PANEL ADMINISTRADOR -->
+    <!-- ========================== -->
+
+    <main
+        class="panel-admin"
+        id="panelAdmin"
+        style="display: none;"
+    >
+
+        <header class="cabecera-admin">
+
+            <div class="marca-admin">
+
+                <span>
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        AgendaNiva
+                    </strong>
+
+                    <small>
+                        Control de suscripciones
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnCerrarSesionAdmin"
+                class="boton-cerrar-admin"
+            >
+                Cerrar sesión
+            </button>
+
+        </header>
+
+
+        <section class="contenido-admin">
+
+            <div class="titulo-admin">
+
+                <div>
+
+                    <span>
+                        ADMINISTRACIÓN
+                    </span>
+
+                    <h1>
+                        Centro de administración
+                    </h1>
+
+                    <p>
+                        Gestioná negocios, vencimientos y propuestas desde un solo lugar.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnActualizarNegocios"
+                    class="boton-actualizar-admin"
+                >
+                    Actualizar
+                </button>
+
+            </div>
+
+
+            <nav class="navegacion-admin" aria-label="Secciones del administrador"><a href="#operacionAdmin">Resumen</a><a href="#directorioAdmin">Negocios</a><a href="#propuestasAdmin">Propuestas</a><a href="#marcaAdmin">Marca</a></nav><section id="operacionAdmin" class="modulo-admin"><h2>Panorama general</h2><div id="indicadoresOperacionAdmin" class="indicadores-operacion"></div><div id="alertasOperacionAdmin"></div><p id="actualizadoAdmin" class="texto-suave-admin"></p></section><section id="propuestasAdmin" class="modulo-admin"><div class="fila-admin"><div><h2>Propuestas de los negocios</h2><p>Ideas, mejoras y errores enviados desde los paneles.</p></div><button type="button" id="recargarPropuestasAdmin">Actualizar propuestas</button></div><div class="filtros-admin"><label>Buscar propuesta<input type="search" id="buscarPropuestasAdmin" placeholder="Negocio o comentario"></label><label>Estado<select id="estadoPropuestasAdmin"><option value="">Todos</option><option value="nueva">Nueva</option><option value="en_revision">En revisión</option><option value="planificada">Planificada</option><option value="resuelta">Resuelta</option><option value="descartada">Descartada</option></select></label><label>Tipo<select id="tipoPropuestasAdmin"><option value="">Todos</option><option value="idea">Nueva función</option><option value="mejora">Mejora</option><option value="error">Error</option></select></label></div><p id="mensajePropuestasAdmin" role="status"></p><div id="listaPropuestasAdmin"></div><button type="button" id="masPropuestasAdmin">Cargar más propuestas</button></section>
+<section class="marca-global-admin" id="marcaAdmin">
+
+                <div class="cabecera-marca-global-admin">
+                    <div>
+                        <span>MARCA DE AGENDANIVA</span>
+                        <h2>Logo y colores del panel</h2>
+                        <p>Estos cambios se verán en el menú de todos los negocios.</p>
+                    </div>
+
+                    <div class="preview-logo-global-admin">
+                        <span id="logoAgendaNivaAdminFallback">✦</span>
+                        <img id="logoAgendaNivaAdminPreview" alt="Vista previa del logo" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="controles-marca-global-admin">
+                    <label class="selector-logo-global-admin">
+                        <span>Logo de AgendaNiva</span>
+                        <input type="file" id="logoAgendaNivaAdmin" accept="image/*">
+                        <small>PNG, JPG o WEBP. Máximo 5 MB.</small>
+                    </label>
+
+                    <label>
+                        <span>Color del menú</span>
+                        <input type="color" id="colorMenuAdmin" value="#171114">
+                    </label>
+
+                    <label>
+                        <span>Color de detalles</span>
+                        <input type="color" id="colorAcentoAdmin" value="#e85898">
+                    </label>
+
+                    <button type="button" id="btnGuardarMarcaAdmin">Guardar marca</button>
+                </div>
+
+                <p id="mensajeMarcaAdmin" class="mensaje-marca-admin"></p>
+
+            </section>
+
+
+            <div class="resumen-admin">
+
+                <article>
+
+                    <small>
+                        Negocios totales
+                    </small>
+
+                    <strong id="totalNegociosAdmin">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        Suscripciones activas
+                    </small>
+
+                    <strong id="negociosActivosAdmin">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        Suscripciones suspendidas
+                    </small>
+
+                    <strong id="negociosSuspendidosAdmin">
+                        0
+                    </strong>
+
+                </article>
+
+            </div>
+
+
+            <p
+                class="mensaje-admin"
+                id="mensajePanelAdmin"
+            >
+                Cargando negocios...
+            </p>
+
+
+            <section id="directorioAdmin" class="modulo-admin"><h2>Directorio de negocios</h2><div class="filtros-admin"><label>Buscar<input type="search" id="buscarNegociosAdmin" placeholder="Nombre, teléfono o enlace"></label><label>Filtro<select id="filtroNegociosAdmin"><option value="todos">Todos</option><option value="activos">Activos</option><option value="suspendidos">Suspendidos</option><option value="pendientes">Solicitudes pendientes</option><option value="vencidos">Vencidos</option><option value="proximos">Vencen en 7 días</option><option value="sin_fecha">Sin vencimiento</option></select></label><label>Orden<select id="ordenNegociosAdmin"><option value="nombre">Nombre</option><option value="vencimiento">Vencimiento próximo</option><option value="recientes">Registro más reciente</option></select></label><button type="button" id="exportarNegociosAdmin">Exportar lista filtrada CSV</button></div><p id="cantidadFiltradaAdmin" role="status"></p><div class="fila-admin"><button type="button" id="anteriorNegociosAdmin">Anterior</button><span id="paginaNegociosAdmin"></span><button type="button" id="siguienteNegociosAdmin">Siguiente</button></div></section>
+<div
+                class="lista-negocios-admin"
+                id="listaNegociosAdmin"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================== -->
+    <!-- SUPABASE -->
+    <!-- ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="js/supabase.js?v=20261024"></script>
+
+
+    <!-- ========================== -->
+    <!-- ADMINISTRACIÓN -->
+    <!-- ========================== -->
+
+    <script src="js/admin.js?v=20260925"></script>
+<script src="js/admin-centro.js?v=20261023"></script>
+<script src="js/admin-experiencia.js?v=20261012"></script>
+<script src="js/admin-business.js?v=20261001v2"></script>
+<script src="js/admin-pro.js?v=20261001v2"></script>
+
+
+<script src="js/seguridad-v2.js?v=20261001"></script><script src="js/admin-v2.js?v=20261001"></script><script src="js/admin-premium-layout.js?v=20261001"></script>
+</body>
+
+</html>
